@@ -49,11 +49,13 @@ public class Test {
 
 		car.stop();
 
-		@SuppressWarnings("unused")
+	
 		float availableFuel = car.getAvailableFuel();
+		System.out.println(availableFuel);
 
-		@SuppressWarnings("unused")
+		
 		float fuelConsumedPer100Km = car.getAverageFuelConsumption();
+		System.out.println(fuelConsumedPer100Km);
 		
 		Vehicle vehicle = new VWGolf(30, "1987ddkshik289"); //available fuel and chassis number
 
@@ -65,11 +67,13 @@ public class Test {
 
 		Car car2 = (Car) vehicle;
 
-		@SuppressWarnings("unused")
+	
 		float availableFuel2 = car2.getAvailableFuel();
+		System.out.println(availableFuel2);
 
-		@SuppressWarnings("unused")
+		
 		float fuelConsumedPer100Km2 = car2.getAverageFuelConsumption();
+		System.out.println(fuelConsumedPer100Km2);
 
 	}
 
