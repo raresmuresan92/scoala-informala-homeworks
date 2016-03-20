@@ -11,6 +11,7 @@ public class ArtAlbum extends Book {
 	//ArrayList constructor
 	static ArrayList<ArtAlbum>artAlbumList = new ArrayList<ArtAlbum>() ;
 	
+    // TODO - CODE REVIEW - why is ths static ArtAlbum reference required?!
 	static ArtAlbum a;//this variable is used in addArtAlbum method
 	
 	//default Constructor
@@ -28,6 +29,9 @@ public class ArtAlbum extends Book {
 		return pageQuality;
 	}
 	
+    /* TODO - CODE REVIEW - these responsabilities (adding listing albums) do not belong to the Album class.
+    These responsabilities belong to the library.
+    */
 	public static void addArtAlbum(){
         System.out.println("> Enter the name of the art album: ");
         String bookName = userInput.nextLine();
@@ -35,7 +39,7 @@ public class ArtAlbum extends Book {
         String pageQuality = userInput.nextLine();
         System.out.println("> Enter the number of pages: ");
         Integer numberOfPages = userInput.nextInt();
-        
+        // TODO - CODE REVIEW - couldn't you just use ArtAlbum a = new ArtAlbum(...)?? Why the need for the static?
         a = new ArtAlbum(bookName, numberOfPages, pageQuality);
         artAlbumList.add(a);
 	}

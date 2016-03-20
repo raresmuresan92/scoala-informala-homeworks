@@ -33,6 +33,21 @@ public class MakeDecision {
 				Novel.addNovel();
 			} else if (choiceInput2 == 2) {
 				System.out.println(">>You have chosen to add art album.<<");
+                /*
+                TODO - CODE REVIEW
+                Responsabilities are not understood. Also static behavior is unwanted here.
+                
+                What you should have done:
+                
+                LibraryCatalog library = new LibraryCatalog();
+                ArtAlbum newArtAlbum = readAlbumFromScanner(); // this could be a method in MakeDecision
+                library.add(newArtAlbum);
+                Novel novel = readNovelFromScanner();
+                library.add(novel); // notice how the add method accepts both ArtAlbum and Novel via polimorphism
+                
+                where in the LibraryCatalog class the add method expects a Book object.
+                
+                */
 				ArtAlbum.addArtAlbum();
 			} else {
 				System.out.println("_________________________________________________________________");

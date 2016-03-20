@@ -30,6 +30,7 @@ public class Novel extends Book {
 		return novelType;
 	}
 	
+    // TODO - CODE REVIEW - same as with ArtAlbum
 	public static void addNovel(){
         System.out.println("> Enter the name of the novel: ");
         String bookName = userInput.nextLine();
