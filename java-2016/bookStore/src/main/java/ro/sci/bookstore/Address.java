@@ -5,7 +5,14 @@ public class Address {
 	private String streetName;
 	private int streetNumber;
 	private String cityName;
-
+	
+	
+	//Address constructor
+	public Address(String streetName, int streetNumber, String cityName){
+		this.streetName = streetName;
+		this.streetNumber = streetNumber;
+		this.cityName = cityName;
+	}
 	public String getStreetName() {
 		return streetName;
 	}

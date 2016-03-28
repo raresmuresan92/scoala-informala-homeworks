@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,10 +34,12 @@ public class TestAddress {
 		Address firstAddress = address.get(0);
 		
 		assertEquals("Aleea Retezat", firstAddress.getStreetName());
+		assertEquals(5, firstAddress.getStreetNumber());
+		assertEquals("Cluj-Napoca", firstAddress.getCityName());
 	}
 	
 	private Address addNewAddress(String streetName, int streetNumber, String cityName){
-		Address newAddress = new Address();
+		Address newAddress = new Address(streetName, streetNumber, cityName);
 		newAddress.setStreetName(streetName);
 		newAddress.setStreetNumber(streetNumber);
 		newAddress.setCityName(cityName);
@@ -44,6 +47,13 @@ public class TestAddress {
 		return newAddress;
 	}
 	
+	@After
+	public void deleteAddress() {
+		// int address
+		address = null;
+
+		System.out.println("Address was deleted.");
+	}
 
 }
 

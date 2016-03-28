@@ -13,7 +13,7 @@ public class TestCatalog {
 
 	// declare Catalog
 	List<Book> catalog = null;
-
+	
 	@Before
 	public void intCatalog() {
 		// int catalog
@@ -55,3 +55,5 @@ public class TestCatalog {
 	}
 
 }
+
+    

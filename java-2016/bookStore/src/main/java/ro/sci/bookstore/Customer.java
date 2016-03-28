@@ -4,17 +4,21 @@ public class Customer {
 	
 	private String name;
 	private String email;
-	private Address address = new Address();
+	private Address address;
+	private Cart cart;
 	
-	public void setAddress(String streetName) {
-		address.setStreetName(streetName);
+	//Customer constructor
+	public Customer(String name, String email){
+		this.name = name;
+		this.email = email;
 	}
-
-	public Address getAddress() {
-		return address;
+	
+	//Customer constructor with address
+	public Customer(String name, Address address){
+		this.name = name;
+		this.address = address;
 	}
-
-
+	
 	public String getName() {
 		return name;
 	}
@@ -31,4 +35,21 @@ public class Customer {
 		this.email = email;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
 }
+
