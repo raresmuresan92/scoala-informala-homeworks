@@ -25,6 +25,7 @@ public class CartEntry {
 		return result;	
 	}
 	
+	//this should really happen in cart, because cart should have access through cart entry to book and stock
 	public void adjustStock(){
 		if (isInStock()){
 			int stockQuantity = stock.getQuantity();

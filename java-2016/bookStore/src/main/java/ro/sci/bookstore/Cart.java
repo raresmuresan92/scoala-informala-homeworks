@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Cart {
 	
+	//this is rather cartEntries
 	List<CartEntry> newCartEntry = new ArrayList<CartEntry>();
 	double totalPrice=0;
 	
